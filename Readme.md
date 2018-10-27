@@ -1,4 +1,4 @@
-# Data Mininf
+# Data Mining
 
 ## Getting Started 
 
