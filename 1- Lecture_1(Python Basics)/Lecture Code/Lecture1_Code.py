@@ -34,7 +34,7 @@ print('Now, variable a has value', a,
 # -----------------------
 x = 5.62
 print(type(x))
-pi = 3.14159;
+pi = 3.14159
 print("Pi =", pi)
 print("or", 3.14, "short")
 avogadros_number = 6.022e23
@@ -80,9 +80,9 @@ print(10%3, 3%10)
 # -----------------------
 degreesF = eval(input('Enter the temperature in degrees F: '))
 # Perform the conversion
-degreesC = 5/9*(degreesF - 32);
+degreesC = 5/9*(degreesF - 32)
 # Report the result
-print(degreesF, "degrees F =', degreesC, 'degrees C')
+print('temperature in degrees C: ', degreesC)
 # -----------------------
 a = True
 b = False
@@ -90,20 +90,20 @@ print('a =', a, ' b =', b)
 a = False;
 print('a =', a, ' b =', b)
 dividend, divisor = input('Enter two numbers to divide: ')
-if divisor != 0:
-	print(dividend, '/', divisor, "=", dividend/divisor)
+if int(divisor) != 0:
+	print('dividend / divisor = ', int(dividend)/int(divisor))
 if x < 1:
 	y = x
 if x < 1: y = x
 dividend, divisor = input('Please enter two numbers: ')
-if divisor != 0:
-	quotient = dividend/divisor
-	print(dividend, '/', divisor, "=", quotient)
+if int(divisor) != 0:
+	quotient = int(dividend)/int(divisor)
+	print(dividend + '/'+ divisor + "=", quotient)
 print('Program finished')
 # -----------------------
 dividend, divisor = input('Please enter two numbers: ')
-if divisor != 0:
-	print(dividend, '/', divisor, "=", dividend/divisor)
+if int(divisor) != 0:
+	print(dividend+ '/'+ divisor+ "=", int(dividend)/int(divisor))
 else:
 	print('Division by zero is not allowed')
 a1 = 1 - 1
@@ -130,13 +130,13 @@ if x == 1 or 2 or 3:
 	print("OK") 
 x == 1 or 2 or 3
 # -----------------------
-value = eval(input("Enter value in the range 0 to10: ")
-if value >= 0: # First check
-	if value <= 10: # Second check
+value = input("Enter value in the range 0 to10: ")
+if int(value) >= 0: # First check
+	if int(value) <= 10:
 		print("In range")
 print("Done")
-value = eval(input("Enter value in the range 0 to10: ")
-if value >= 0 and value <= 10: 
+value = input("Enter value in the range 0 to10: ")
+if int(value) >= 0 and int(value) <= 10:
 	print("In range")
 print("Done")
 # -----------------------
@@ -170,23 +170,23 @@ if choice == 'n':
 				print("necessary. If the problem ")
 				print("persists, then ")
 				print("please run this program again.")
-	else: 
-		print("Please consult a service technician.")
+else:
+	print("Please consult a service technician.")
 # -----------------------
 value = input("Enter a value from range 0 to 5: ")
-if value < 0:
+if int(value) < 0:
 	print("Too small")
-elif value == 0:
+elif int(value) == 0:
 	print("zero")
-elif value == 1:
+elif int(value) == 1:
 	print("one")
-elif value == 2:
+elif int(value) == 2:
 	print("two")
-elif value == 3:
+elif int(value) == 3:
 	print("three")
-elif value == 4:
+elif int(value) == 4:
 	print("four")
-elif value == 5:
+elif int(value) == 5:
 	print("five")
 else:
 	print("Too large")
@@ -200,9 +200,9 @@ entry = 0
 sum = 0 
 print("Enter numbers to sum, negative number ends list:")
 while entry >= 0:
-	entry = input()
-	if entry >= 0: 
-		sum += entry 
+	entry = int(input())
+	if int(entry) >= 0:
+		sum += int(entry)
 print("Sum =", sum)
 n = 1
 stop = int(input())
@@ -226,7 +226,7 @@ for row in range(1, 11):
 		print(" ", end="")
 	print(row, "| ", end="") 
 	for column in range(1, 11): 
-		product = row*column;
+		product = row*column
 		if product < 100: 
 			print(end=" ")
 		if product < 10:
@@ -245,23 +245,23 @@ while True:
 print("Sum =", sum)
 
 sum = 0
-done = False;
+done = False
 while not done:
 	val = eval(input("Enter positive integer (999 quits):"))
 	if val < 0:
 		print("Negative value", val, "ignored")
-			continue; 
+		continue
 	if val != 999:
 		print("Tallying", val)
 		sum += val
 	else:
-		done = (val == 999); 
+		done = (val == 999)
 print("sum =", sum)
 # -----------------------
 # while True:
 	# Do something forever. . .
 MAX = 20 
-n = 1 
+n = 21
 while n <= MAX: 
 	factor = 1 
 	print(end=str(n) + ': ') 
@@ -280,7 +280,7 @@ for n in range(1, MAX + 1):
 			print(factor, end=' ') 
 	print() 
 # -----------------------
-val = input('Enter number: ')
+val = eval(input('Enter number: '))
 root = 1.0;
 diff = root*root - val
 while diff > 0.00000001 or diff < -0.00000001:
