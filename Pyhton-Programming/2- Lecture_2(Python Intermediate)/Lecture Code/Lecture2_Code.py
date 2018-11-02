@@ -149,3 +149,150 @@ def is_prime(n):
 print(help(is_prime))
 print('#',50*"-")
 # -----------------------
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(nums[3])
+nums[2] = (nums[0] + nums[9])/2;
+nums[1], nums[4] = eval(input("Enter a, b: "))
+
+collection = [1, 2, 'Amir', 19, -3, 'end']
+for item in collection:
+    print(item)
+nums = [2, 4, 6, 8]
+for i in range(len(nums) - 1, -1, -1):
+    print(nums[i])
+a = list(range(0, 10))
+print(a)
+a = list(range(10, -1, -1))
+print(a)
+a = list(range(0, 100, 10))
+print(a)
+a = list(range(-5, 6))
+print(a)
+print('#',50*"-")
+# -----------------------
+def main():
+    sum = 0.0
+    NUMBER_OF_ENTRIES = 5
+    numbers = []
+    print("Please enter", NUMBER_OF_ENTRIES, "numbers: ")
+    for i in range(0, NUMBER_OF_ENTRIES):
+        num = eval(input("Enter number " + str(i) + ": "))
+        numbers += [num]
+        sum += num
+
+    print(end="Numbers entered: ")
+    for num in numbers:
+        print(num, end=" ")
+    print()
+    print("Average:", sum/NUMBER_OF_ENTRIES)
+    print(numbers)
+main()
+print('#',50*"-")
+# -----------------------
+a = [1, 2, 3, 4]
+b = [1, 2, 3, 4]
+print('Is ', a, ' equal to ', b, '?', sep='', end=' ')
+print(a == b)
+print('Are ', a, ' and ', b, ' aliases?', sep='', end=' ')
+print(a is b)
+c = [10, 20, 30, 40]
+d = c
+print('Is ', c, ' equal to ', d, '?', sep='', end=' ')
+print(c == d)
+print('Are ', c, ' and ', d, ' aliases?', sep='', end=' ')
+print(c is d)
+print('#',50*"-")
+# -----------------------
+lst = [10, 20, 30, 40, 50, 60, 70, 80]
+print(lst)
+print(lst[0:3])
+print(lst[4:8])
+print(lst[2:5])
+print(lst[-5:-3])
+print(lst[:3])
+print(lst[4:])
+print(lst[:])
+print(lst[-100:3])
+print(lst[4:100])
+print('#',50*"-")
+# -----------------------
+from random import randrange
+def random_list():
+    result = []
+    count = randrange(3, 20)
+    for i in range(count):
+        result += [randrange(-50, 50)]
+    return result
+def selection_sort(lst):
+    n = len(lst)
+    for i in range(n - 1):
+        small = i
+    for j in range(i + 1, n):
+        if lst[j] < lst[small]:
+            small = j
+    if i != small:
+        lst[i], lst[small] = lst[small], lst[i]
+def main():
+    for n in range(10):
+        col = random_list()
+        print(col)
+        selection_sort(col)
+        print(col)
+        print('==============================')
+main()
+print('#',50*"-")
+# -----------------------
+def permute(prefix, suffix):
+    suffix_size = len(suffix)
+    if suffix_size == 0:
+        print(prefix)
+    else:
+        for i in range(0, suffix_size):
+            new_pre = prefix + [suffix[i]]
+            new_suff = suffix[:i] + suffix[i + 1:]
+            permute(new_pre, new_suff)
+def print_permutations(lst):
+    permute([], lst)
+def main():
+    a = [1, 2, 3, 4]
+    print_permutations(a)
+main()
+print('#',50*"-")
+# -----------------------
+a = (1, 2, 3, 4)
+print(a[1])
+print(a[0:3])
+b = a.index(1)
+print(b)
+t = ("a", "b", "mpilgrim", "z", "example")
+t[0]
+t[-1]
+t.append("new")
+v = ('a', 'b', 'e')
+(x, y, z) = v
+range(2)
+(MONDAY, TUESDAY, WEDNESDAY)=range(2)
+print('#',50*"-")
+# -----------------------
+d = {"server":"one","database":"master"}
+d["database"]
+d["database"] = "pubs"
+d["uid"] = "sa"
+d["retrycount"] = 3
+d[42] = "douglas"
+del d[42]
+d.clear()
+empty_dict = {}
+my_dict = {'a': 1, 'b': 2, 'c': "3"}
+print(my_dict['a'])
+del my_dict['b']
+print(my_dict.get('e'))
+print(my_dict.keys())
+print(my_dict.values())
+print(my_dict.items())
+print('c' in my_dict)
+print('#',50*"-")
+# -----------------------
+
+
+
