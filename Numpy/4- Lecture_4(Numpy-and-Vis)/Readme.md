@@ -1,11 +1,8 @@
 # Data Mining
 
-## Getting Started 
+## Numpy
 
-* Python Programming
-** Basic
-** Intemediate
-** Advance
+## Matplotlib
 
-* Numpy
+
 

@@ -3,9 +3,10 @@
 ## Getting Started 
 
 * Python Programming
-** Basic
-** Intemediate
-** Advance
+
+1. Basic
+2. Intemediate
+3. Advance
 
 * Numpy
 
