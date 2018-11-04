@@ -4,9 +4,9 @@
 
 * Python Programming
 
-1. Basic
-2. Intemediate
-3. Advance
+	* Basic
+	* Intemediate
+	* Advance
 
 * Numpy
 
