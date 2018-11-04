@@ -2,11 +2,11 @@
 
 ## Getting Started 
 
-* Python Programming
+1. Python Programming
 
-	* Basic
-	* Intemediate
-	* Advance
+	1. Basic
+	2. Intemediate
+	3. Advance
 
-* Numpy
+2. Numpy & Python Visualization
 
