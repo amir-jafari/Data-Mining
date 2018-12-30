@@ -156,22 +156,91 @@ d = a.copy()
 print(d is a)
 print('#',50*"-")
 # -----------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+a = np.arange(12)**2
+i = np.array( [ 1,1,3,8,5 ] )
+print(a[i])
+j = np.array( [ [ 3, 4], [ 9, 7 ] ] )
+print(a[j])
+palette = np.array( [ [0, 0, 0 ],# black
+                     [255,0, 0 ],# red
+                     [0,255, 0 ], # green
+                     [0,0, 255 ], # blue
+                    [255,255,255]])# white
+image = np.array( [ [ 0, 1, 2, 0 ],
+                    [ 0, 3, 4, 0 ] ] )
+# each value corresponds to a color in the palette
+print(palette[image])
+print('#',50*"-")
+# -----------------------
+a = np.arange(12).reshape(3,4)
+print(a)
+i = np.array( [ [0,1],[1,2] ] )
+j = np.array( [ [2,1],[3,3] ] )
+print(a[i,j]); print(a[i,2]); print(a[:,j])
+s = np.array( [i,j] ); print(a[tuple(s)])
+time = np.linspace(20, 145, 5)
+data = np.sin(np.arange(20)).reshape(5,4)
+ind = data.argmax(axis=0)
+time_max = time[ ind]
+data_max = data[ind, range(data.shape[1])]
+print(np.all(data_max == data.max(axis=0)))
+print('#',50*"-")
+# -----------------------
+a = np.arange(5)
+a[[1,3,4]] = 0
+print(a)
+a[[0,0,2]]+=1
+print(a)
+print('#',50*"-")
+# -----------------------
+a = np.arange(12).reshape(3,4)
+b = a > 4; print(b)
+print(a[b])
+a[b] = 0 ; print(a)
+a = np.arange(12).reshape(3,4)
+b1 = np.array([False,True,True])
+b2 = np.array([True,False,True,False])
+print(a[b1,:]); print(a[b1])
+print(a[:,b2]); print(a[b1,b2])
+print('#',50*"-")
+# -----------------------
+a = np.array([2,3,4,5])
+b = np.array([8,5,4])
+c = np.array([5,4,6,8,3])
+ax,bx,cx = np.ix_(a,b,c)
+print(ax); print(bx);print(cx)
+print(ax.shape, bx.shape, cx.shape)
+result = ax+bx*cx
+print(result)
+print(result[3,2,4])
+print(a[3]+b[2]*c[4])
+# Automatic Reshaping
+a = np.arange(30)
+a.shape = 2,-1,3
+print(a.shape); print(a)
+# Vector Stacking
+x = np.arange(0,10,2)
+y = np.arange(5)
+m = np.vstack([x,y])
+xy = np.hstack([x,y])
+print(xy)
+print('#',50*"-")
+# -----------------------
+a = np.arange(30)
+a.shape = 2,-1,5 # -1 means "whatever size"
+print(a.shape)
+print(a)
+a.shape = 6,5
+print(a.shape)
+print(a)
+x = np.arange(0,10,2)
+y = np.arange(5)
+m = np.vstack([x,y])
+n = np.hstack([x,y])
+print(m)
+print(n)
+print('#',50*"-")
+# -----------------------
 
 
 
