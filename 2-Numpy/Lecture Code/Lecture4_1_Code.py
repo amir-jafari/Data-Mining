@@ -314,7 +314,24 @@ x[np.array([1, 1, 3, 1])] += 1
 print(x)
 print('#',50*"-")
 # -----------------------
-
+a = np.array([1.0, 2.0, 3.0])
+b = np.array([2.0, 2.0, 2.0])
+print(a * b)
+a = np.array([1.0, 2.0, 3.0])
+b = 2.0
+print(a * b)
+x = np.arange(4)
+xx = x.reshape(4,1)
+y = np.ones(5)
+z = np.ones((3,4))
+print(x.shape)
+print(y.shape)
+print(xx.shape)
+print(y.shape)
+print((xx + y).shape)
+print(xx + y)
+print((x + z).shape)
+print(x + z)
 
 
 
