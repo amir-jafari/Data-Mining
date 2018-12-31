@@ -288,8 +288,32 @@ print(y[np.array([0,2,4]), np.array([0,1,2])])
 #print(y[np.array([0,2,4]), np.array([0,1])])
 print(y[np.array([0,2,4]), 1]) # broadcasting
 print(y[np.array([0,2,4])])
-
-
+print('#',50*"-")
+# -----------------------
+n = np.arange(35)
+b = n>20
+print(n[b])
+x = np.arange(30).reshape(2,3,5)
+print(x)
+b = np.array([[True, True, False], [False, True, True]])
+print(x[b])
+print('#',50*"-")
+# -----------------------
+x = np.arange(5)
+print(x[:,np.newaxis])
+print(x[np.newaxis,:])
+print(x[:,np.newaxis] + x[np.newaxis,:])
+z = np.arange(81).reshape(3,3,3,3)
+print(z[1,...,2])
+print(z[1,:,:,2])
+x = np.arange(10)
+x[2:7] = 1
+x[2:7] = np.arange(5)
+x = np.arange(0, 50, 10)
+x[np.array([1, 1, 3, 1])] += 1
+print(x)
+print('#',50*"-")
+# -----------------------
 
 
 
