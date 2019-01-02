@@ -12,6 +12,11 @@
 
 # =================================================================
 # Class_Ex2:
+# A file contains N columns of values, describing N–1 curves.
+# The first column contains the  x coordinates, the second column
+# contains the y coordinates of the first curve, the third
+# column contains the y coordinates of the second curve, and so on.
+#  We want to display those N–1 curves.
 
 # ----------------------------------------------------------------
 
