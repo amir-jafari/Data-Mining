@@ -30,9 +30,9 @@
 # a bar chart plot.
 # Use the following data.
 # ----------------------------------------------------------------
-data = np.random.rand(3,4)
-color_list = ['b', 'g', 'r']
-X = np.arange(data.shape[1])
+data = np.random.rand(5,3)
+color_list = ['b', 'g', 'r', 'k', 'y']
+
 
 
 
