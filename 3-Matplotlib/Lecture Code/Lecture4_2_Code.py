@@ -30,7 +30,7 @@ import numpy as np
 # plt.plot(x5, y5)
 # plt.show()
 # print('#',50*"-")
-# -----------------------
+# # -----------------------
 # x6 = []
 # y6 = []
 # for line in open('data1.txt', 'r'):
@@ -126,11 +126,11 @@ import numpy as np
 # plt.show()
 # print('#',50*"-")
 # # -----------------------
-def pdf(X, mu, sigma):
-    a = 1. / (sigma * np.sqrt(2. * np.pi))
-    b = -1. / (2. * sigma ** 2)
-    return a * np.exp(b * (X - mu) ** 2)
-x13 = np.linspace(-6, 6, 1000)
+# def pdf(X, mu, sigma):
+#     a = 1. / (sigma * np.sqrt(2. * np.pi))
+#     b = -1. / (2. * sigma ** 2)
+#     return a * np.exp(b * (X - mu) ** 2)
+# x13 = np.linspace(-6, 6, 1000)
 # for i in range(5):
 #     samples = np.random.standard_normal(50)
 #     mu, sigma = np.mean(samples), np.std(samples)
@@ -178,15 +178,75 @@ x13 = np.linspace(-6, 6, 1000)
 # plt.show()
 # print('#',50*"-")
 # # -----------------------
-x13 = np.linspace(-6, 6, 1024)
-plt.plot(x13, pdf(x13, 0., 1.), color = 'k', linestyle = 'solid')
-plt.plot(x13, pdf(x13, 0., .5), color = 'k', linestyle = 'dashed')
-plt.plot(x13, pdf(x13, 0., .25), color = 'k', linestyle = 'dashdot')
-plt.show()
+# x13 = np.linspace(-6, 6, 1024)
+# plt.plot(x13, pdf(x13, 0., 1.), color = 'k', linestyle = 'solid')
+# plt.plot(x13, pdf(x13, 0., .5), color = 'k', linestyle = 'dashed')
+# plt.plot(x13, pdf(x13, 0., .25), color = 'k', linestyle = 'dashdot')
+# plt.show()
+#
+# for i in range(64):
+#     samples = np.random.standard_normal(50)
+#     mu, sigma = np.mean(samples), np.std(samples)
+#     plt.plot(x13, pdf(x13, mu, sigma), color = '.75', linewidth = .5)
+# plt.plot(x13, pdf(x13, 0., 1.), color = 'y', linewidth = 3.)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# a = np.random.standard_normal((100, 2))
+# a += np.array((-2, -2)) # Center
+# b = np.random.standard_normal((100, 2))
+# b += np.array((2, 2)) # Center
+# plt.scatter(a[:,0], a[:,1], color = 'k', marker = 'x')
+# plt.scatter(b[:,0], b[:,1], color = 'k', marker = '^')
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# X = np.linspace(-6, 6, 1024)
+# Y1 = np.sinc(X)
+# Y2 = np.sinc(X) + 1
+# plt.plot(X, Y1, marker = 'o', color = '.75')
+# plt.plot(X, Y2, marker = 'o', color = 'k', markevery = 32)
+# plt.show()
+#
+# a = np.random.standard_normal((100, 2))
+# a += np.array((-1, -1))
+# b = np.random.standard_normal((100, 2))
+# b += np.array((1, 1))
+# plt.scatter(b[:,0], b[:,1], c = 'r', s = 100)
+# plt.scatter(a[:,0], a[:,1], c = 'b', s = 25)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# import matplotlib.path as mpath
+# shape_description = [
+# ( 1., 2., mpath.Path.MOVETO),
+# ( 1., 1., mpath.Path.LINETO),
+# ( 2., 1., mpath.Path.LINETO),
+# ( 2., -1., mpath.Path.LINETO),
+# ( 1., -1., mpath.Path.LINETO),
+# ( 1., -2., mpath.Path.LINETO),
+# (-1., -2., mpath.Path.LINETO),
+# (-1., -1., mpath.Path.LINETO),
+# (-2., -1., mpath.Path.LINETO),
+# (-2., 1., mpath.Path.LINETO),
+# (-1., 1., mpath.Path.LINETO),
+# (-1., 2., mpath.Path.LINETO),
+# ( 0., 0., mpath.Path.CLOSEPOLY),
+# ]
+# u, v, codes = zip(*shape_description)
+# my_marker = mpath.Path(np.asarray((u, v)).T, codes)
+# data = np.random.rand(10, 10)
+# plt.scatter(data[:,0], data[:, 1], c = 'b', marker = my_marker, s = 120)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+x15 = np.linspace(-6, 6, 1024)
+y15 = np.sinc(x15)
 
-for i in range(64):
-    samples = np.random.standard_normal(50)
-    mu, sigma = np.mean(samples), np.std(samples)
-    plt.plot(x13, pdf(x13, mu, sigma), color = '.75', linewidth = .5)
-plt.plot(x13, pdf(x13, 0., 1.), color = 'y', linewidth = 3.)
+plt.plot(x15, y15,
+linewidth = 3., color = 'k',
+markersize = 9, markeredgewidth = 1.5,
+markerfacecolor = '.75', markeredgecolor = 'k',
+marker = 'o', markevery = 32)
+
 plt.show()
