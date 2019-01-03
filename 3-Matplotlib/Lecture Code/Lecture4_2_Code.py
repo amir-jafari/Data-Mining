@@ -93,4 +93,34 @@ import numpy as np
 # plt.show()
 # print('#',50*"-")
 # # -----------------------
-
+# BMI = np.array([5., 30., 45., 22.])
+# age = np.array( [5., 25., 50., 20.])
+# x11 = np.arange(4)
+# plt.barh(x11, BMI, color = 'r')
+# plt.barh(x11, -age, color = 'b')
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# data = np.array([5, 25, 50, 20])
+# plt.pie(data)
+# plt.show()
+#
+# x12 = np.random.randn(1000)
+# plt.hist(x12, bins = 20)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# data = np.random.randn(100)
+# plt.boxplot(data)
+# plt.show()
+#
+# data = np.random.randn(100, 5)
+# plt.boxplot(data)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+import matplotlib.tri as tri
+data = np.random.rand(100, 2)
+triangles = tri.Triangulation(data[:,0], data[:,1])
+plt.triplot(triangles)
+plt.show()
