@@ -26,10 +26,13 @@
 
 # =================================================================
 # Class_Ex3: 
-
+# Write a efficient code to stack any number of layers of data into
+# a bar chart plot.
+# Use the following data.
 # ----------------------------------------------------------------
-
-
+data = np.random.rand(3,4)
+color_list = ['b', 'g', 'r']
+X = np.arange(data.shape[1])
 
 
 
