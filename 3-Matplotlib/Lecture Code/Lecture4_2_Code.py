@@ -119,8 +119,53 @@ import numpy as np
 # plt.show()
 # print('#',50*"-")
 # # -----------------------
-import matplotlib.tri as tri
-data = np.random.rand(100, 2)
-triangles = tri.Triangulation(data[:,0], data[:,1])
-plt.triplot(triangles)
+# import matplotlib.tri as tri
+# data = np.random.rand(100, 2)
+# triangles = tri.Triangulation(data[:,0], data[:,1])
+# plt.triplot(triangles)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# def pdf(X, mu, sigma):
+#     a = 1. / (sigma * np.sqrt(2. * np.pi))
+#     b = -1. / (2. * sigma ** 2)
+#     return a * np.exp(b * (X - mu) ** 2)
+# x13 = np.linspace(-6, 6, 1000)
+# for i in range(5):
+#     samples = np.random.standard_normal(50)
+#     mu, sigma = np.mean(samples), np.std(samples)
+#     plt.plot(x13, pdf(x13, mu, sigma), color = '.75')
+#     plt.plot(x13, pdf(x13, 0., 1.), color = 'k')
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# a = np.random.standard_normal((100, 2))
+# a += np.array((-2, -2)) # Center
+# b = np.random.standard_normal((100, 2))
+# b += np.array((2, 2)) # Center
+# plt.scatter(a[:,0], a[:,1], color = '.2')
+# plt.scatter(b[:,0], b[:,1], color = '.8')
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# data = np.random.standard_normal((100, 2))
+# plt.scatter(data[:,0], data[:,1], color = '1.0', edgecolor='0.0')
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# values = np.random.random_integers(99, size = 50)
+# color_set = ('.00', '.25', '.50', '.75')
+# color_list = [color_set[(len(color_set) * val) // 100] for val in
+# values]
+# plt.bar(np.arange(len(values)), values, color = color_list)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+import matplotlib.cm as cm
+N = 256
+angle = np.linspace(0, 8 * 2 * np.pi, N)
+radius = np.linspace(.5, 1., N)
+X = radius * np.cos(angle)
+Y = radius * np.sin(angle)
+plt.scatter(X, Y, c = angle, cmap = cm.hsv)
 plt.show()
