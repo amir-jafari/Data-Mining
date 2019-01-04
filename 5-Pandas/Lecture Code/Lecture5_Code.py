@@ -111,5 +111,81 @@ print(data)
 print(data)
 print('#',50*"-")
 # -----------------------
+data = np.random.rand(2,4,5)
+p = pd.Panel(data)
+print (p)
 
+data = {'Item1' : pd.DataFrame(np.random.randn(4, 3)),
+        'Item2' : pd.DataFrame(np.random.randn(4, 2))}
+p = pd.Panel(data)
+print(p)
+print(p['Item1'])
+print(p.major_xs(1))
+print(p.minor_xs(1))
+print('#',50*"-")
+# -----------------------
+d = {'Name':pd.Series(['a','b','c','d']),
+     'Age':pd.Series([10,15,20,30]),
+     'Rating':pd.Series([4,3,2,1])}
+
+
+df = pd.DataFrame(d)
+print(df)
+print(df.sum())
+print(df.sum(1))
+
+print(df.mean())
+print(df.std())
+print(df.count())
+print(df.min())
+print(df.median())
+print(df.mode())
+print(df.cumsum())
+print (df.describe(include='all'))
+print('#',50*"-")
+# -----------------------
+def adder(ele1,ele2):
+   return ele1+ele2
+
+df = pd.DataFrame(np.random.rand(2,2),columns=['col1','col2'])
+print(df)
+df.pipe(adder, 2)
+print(df.apply(np.mean))
+print(df.apply(np.mean, axis=1))
+
+df['col1'].map(lambda x:x*2)
+print(df.apply(np.mean, axis=1))
+print('#',50*"-")
+# -----------------------
+df = pd.DataFrame({
+   'A': np.linspace(0,stop=20-1,num=20),
+   'B': np.random.rand(20),
+   'D': np.random.normal(100, 10, size=(20)).tolist()
+                  })
+print(df)
+df_reindexed = df.reindex(index=[0, 1, 2], columns=['A', 'B', 'C'])
+print(df_reindexed)
+
+df1 = pd.DataFrame(np.random.randn(4,3),columns=['col1','col2','col3'])
+print(df1)
+print(df1.rename(columns={'col1' : 'c1', 'col2' : 'c2'},
+       index = {0 : 'apple', 1 : 'banana', 2 : 'orange'}))
+print('#',50*"-")
+# -----------------------
+df = pd.DataFrame({
+   'A': np.linspace(0,stop=20-1,num=20),
+   'B': np.random.rand(20),
+   'D': np.random.normal(100, 10, size=(20)).tolist()
+                  })
+print(df)
+for col in df:
+   print (col)
+
+for key,value in df.iteritems():
+   print(key,value)
+
+for row_index,row in df.iterrows():
+   print (row_index,row)
+print('#',50*"-")
+# -----------------------
 
