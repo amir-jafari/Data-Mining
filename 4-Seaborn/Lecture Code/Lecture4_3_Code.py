@@ -61,17 +61,96 @@ import numpy as np
 # plt.show()
 # print('#',50*"-")
 # # -----------------------
-sns.set(style="darkgrid")
+# sns.set(style="darkgrid")
+#
+# df = sns.load_dataset("titanic")
+#
+# pal = dict(male="#6495ED", female="#F08080")
+#
+# g = sns.lmplot(x="age", y="survived", col="sex", hue="sex", data=df,
+#                palette=pal, y_jitter=.02, logistic=True)
+#
+# g.set(xlim=(0, 80), ylim=(-.05, 1.05))
+#
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+import pandas as pd
+# sns.set(style="whitegrid", palette="muted")
+#
+# iris = sns.load_dataset("iris")
+#
+# iris = pd.melt(iris, "species", var_name="measurement")
+#
+# sns.swarmplot(x="measurement", y="value", hue="species",
+#               palette=["r", "c", "y"], data=iris)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})
+# rs = np.random.RandomState(1979)
+# x = rs.randn(500)
+# g = np.tile(list("ABCDEFGHIJ"), 50)
+# df = pd.DataFrame(dict(x=x, g=g))
+# m = df.g.map(ord)
+# df["x"] += m
+# pal = sns.cubehelix_palette(10, rot=-.25, light=.7)
+# g = sns.FacetGrid(df, row="g", hue="g", aspect=15, palette=pal)
+# g.map(sns.kdeplot, "x", clip_on=False, shade=True, alpha=1, lw=1.5, bw=.2)
+# g.map(sns.kdeplot, "x", clip_on=False, color="w", lw=2, bw=.2)
+# g.map(plt.axhline, y=0, lw=2, clip_on=False)
+# def label(x, color, label):
+#     ax = plt.gca()
+#     ax.text(0, .2, label, fontweight="bold", color=color,
+#            ha="left", va="center", transform=ax.transAxes)
+# g.map(label, "x")
+# g.fig.subplots_adjust(hspace=-.25)
+# g.set_titles("")
+# g.set(yticks=[])
+# g.despine(bottom=True, left=True)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# sns.set(style="ticks")
+#
+# df = sns.load_dataset("iris")
+# sns.pairplot(df, hue="species")
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# sns.set(style="whitegrid")
+#
+# rs = np.random.RandomState(7)
+# x = rs.normal(2, 1, 75)
+# y = 2 + 1.5 * x + rs.normal(0, 2, 75)
+#
+# sns.residplot(x, y, lowess=True, color="g")
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+# sns.set(style="white")
+#
+# rs = np.random.RandomState(5)
+# mean = [0, 0]
+# cov = [(1, .5), (.5, 1)]
+# x1, x2 = rs.multivariate_normal(mean, cov, 500).T
+#
+# x1 = pd.Series(x1, name="$X_1$")
+# x2 = pd.Series(x2, name="$X_2$")
+#
+#
+# g = sns.jointplot(x1, x2, kind="kde", height=7, space=0)
+# plt.show()
+# print('#',50*"-")
+# # -----------------------
+sns.set(style="whitegrid")
 
-df = sns.load_dataset("titanic")
+diamonds = sns.load_dataset("diamonds")
+clarity_ranking = ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "IF"]
 
-pal = dict(male="#6495ED", female="#F08080")
-
-g = sns.lmplot(x="age", y="survived", col="sex", hue="sex", data=df,
-               palette=pal, y_jitter=.02, logistic=True)
-
-g.set(xlim=(0, 80), ylim=(-.05, 1.05))
-
+sns.boxplot(x="clarity", y="carat",
+              color="b", order=clarity_ranking,
+               data=diamonds)
 plt.show()
 print('#',50*"-")
 # -----------------------
