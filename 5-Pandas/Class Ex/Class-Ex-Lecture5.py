@@ -47,3 +47,62 @@ print('#',50*"-")
 
 print('#',50*"-")
 
+# =================================================================
+# Class_Ex6:
+# Read baseball data into a DataFrame and check the first and last
+# 10 rows
+# ----------------------------------------------------------------
+
+
+print('#',50*"-")
+# =================================================================
+# Class_Ex7:
+# Create  a unique index by specifying the id column as the index
+# Check the new df and verify it is unique
+# ----------------------------------------------------------------
+
+
+print('#',50*"-")
+
+# =================================================================
+# Class_Ex8:
+#Notice that the id index is not sequential. Say we wanted to populate
+# the table with every id value.
+# Hint: We could specify and index that is a sequence from the first
+# to the last id numbers in the database, and Pandas would fill in the
+#  missing data with NaN values:
+# ----------------------------------------------------------------
+
+print('#',50*"-")
+
+# =================================================================
+# Class_Ex9:
+# Fill the missing values
+# ----------------------------------------------------------------
+
+
+print('#',50*"-")
+
+# =================================================================
+# Class_Ex10:
+# Find the shape of the new df
+# ----------------------------------------------------------------
+
+
+print('#',50*"-")
+
+# =================================================================
+# Class_Ex11:
+# Drop row 89525 and 89526
+# ----------------------------------------------------------------
+
+print('#',50*"-")
+
+
+# =================================================================
+# Class_Ex12:
+# Sor the df ascending and not ascending
+# ----------------------------------------------------------------
+
+print('#',50*"-")
+
