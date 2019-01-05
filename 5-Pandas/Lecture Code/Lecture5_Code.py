@@ -241,3 +241,52 @@ print(df[['A','B']])
 print(df.A)
 print('#',50*"-")
 # -----------------------
+s = pd.Series([1,2,3,4,5,4])
+print(s.pct_change())
+
+df = pd.DataFrame(np.random.rand(3, 2))
+print(df.pct_change())
+s1 = pd.Series(np.random.rand(10))
+s2 = pd.Series(np.random.rand(10))
+print(s1.cov(s2))
+
+df = pd.DataFrame(np.random.randn(3, 3), columns=['a', 'b', 'c'])
+print(df['a'].cov(df['b']))
+print(df.cov())
+
+df = pd.DataFrame(np.random.randn(15, 3),
+index = pd.date_range('1/1/2019', periods=15),
+columns = ['A', 'B', 'C'])
+
+print(df.rolling(window=3).mean())
+print('#',50*"-")
+# -----------------------
+df = pd.DataFrame(np.random.randn(15, 3),
+index = pd.date_range('1/1/2019', periods=15),
+columns = ['A', 'B', 'C'])
+
+R = df.rolling(window=3,min_periods=1)
+print(R)
+print(R.aggregate(np.sum))
+print(R['A'].aggregate(np.sum))
+print(R[['A','B']].aggregate([np.mean,np.std]))
+print(R.aggregate({'A' : np.sum,'B' : np.count_nonzero}))
+print('#',50*"-")
+# -----------------------
+df13 = pd.DataFrame(np.random.randn(5, 3), index=['a', 'c', 'e', 'f',
+                    'h'],columns=['one', 'two', 'three'])
+print(df13)
+df14 = df13.reindex(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])
+print(df14)
+print(df14['one'].isnull())
+print(df14['one'].notnull())
+print(df14['one'].sum())
+print(df14['one'].sum())
+print(df.fillna(0))
+df15 = df13.reindex(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])
+print(df15.dropna())
+df16 = df13.reindex(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])
+print(df16.dropna(axis=1))
+print(df.replace({1:0,2:0}))
+print('#',50*"-")
+# -----------------------
