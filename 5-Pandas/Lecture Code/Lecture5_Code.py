@@ -346,4 +346,27 @@ print(pd.Timestamp(1283447255,unit='s'))
 print(pd.date_range("12:00", "15:30", freq="30min").time)
 print('#',50*"-")
 # -----------------------
+df = pd.DataFrame(np.random.rand(9,3),index=pd.date_range('1/1/2019',
+   periods=9), columns=list('ABC'))
+print(df)
+df.plot()
+plt.show()
+df = pd.DataFrame(np.random.rand(9,3),columns=['a','b','c'])
+df.plot.bar()
+plt.show()
+df.plot.barh(stacked=True)
+plt.show()
+df.plot.hist(bins=20)
+plt.show()
+df.plot.box()
+plt.show()
+df.plot.area()
+plt.show()
+df.plot.scatter(x='a', y='b')
+plt.show()
+df.plot.pie(subplots=True)
+plt.show()
+print('#',50*"-")
+# -----------------------
+
 
