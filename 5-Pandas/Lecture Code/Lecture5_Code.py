@@ -179,7 +179,7 @@ df = pd.DataFrame({
                   })
 print(df)
 for col in df:
-   print (col)
+   print(col)
 
 for key,value in df.iteritems():
    print(key,value)
@@ -188,4 +188,56 @@ for row_index,row in df.iterrows():
    print (row_index,row)
 print('#',50*"-")
 # -----------------------
+df1=pd.DataFrame(np.random.rand(3, 2), index=[1,6,4],columns=['col2', 'col1'])
+print(df1)
 
+df2 = df1.sort_index()
+df3 = df1.sort_index(ascending=False)
+df4 = df1.sort_index(axis=1)
+df5 = df1.sort_values(by='col1')
+df5 = df1.sort_values(by=['col1', 'col2'])
+df6 = df1.sort_values(by='col1', kind='mergesort')
+
+print(df2)
+print(df3)
+print(df4)
+print(df5)
+print(df6)
+print('#',50*"-")
+# -----------------------
+s = pd.Series(['Amir', 'Brian James', 'Luo', '@gmail','1234','AmirJafari'])
+print(s)
+print(s.str.lower())
+print(s.str.upper())
+print(s.str.len())
+print(s.str.strip())
+print(s.str.split(' '))
+print(s.str.cat(sep='-'))
+print(s.str.get_dummies())
+print(s.str.contains('@'))
+print(s.str.replace('@','-'))
+print(s.str.count('m'))
+print(s.str. startswith ('A'))
+print(s.str.endswith('4'))
+print('#',50*"-")
+# -----------------------
+df = pd.DataFrame(np.random.rand(5, 4),
+index = ['a','b','c','d','e'], columns = ['A', 'B', 'C', 'D'])
+
+print(df.loc[:,'A'])
+print(df.loc[:,['A','C']])
+print(df.loc[['a','b','f','h'],['A','C']])
+print(df.loc['a':'h'])
+print(df.loc['a']>=0)
+print(df.iloc[:3])
+print(df.iloc[:3])
+print(df.iloc[1:3, 2:3])
+print(df.iloc[[1, 3, 4], [1, 3]])
+print(df.iloc[1:3, :])
+print(df.iloc[:,1:3])
+print(df.ix[:4])
+print(df.ix[:,'A'])
+print(df[['A','B']])
+print(df.A)
+print('#',50*"-")
+# -----------------------
