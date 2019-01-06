@@ -29,8 +29,12 @@ C = numpy.log2(B)
 
 # =================================================================
 # Class_Ex4:
-
+# Interpolate the following array using UnivariateSpline method
 # ----------------------------------------------------------------
+x=numpy.arange(5)
+y=numpy.sin(x)
+xn=numpy.linspace(0,4,40)
+
 
 
 
