@@ -267,11 +267,11 @@ print(b)
 t = ("a", "b", "mpilgrim", "z", "example")
 t[0]
 t[-1]
-#t.append("new")
+# t.append("new")
 v = ('a', 'b', 'e')
 (x, y, z) = v
-range(2)
-(MONDAY, TUESDAY, WEDNESDAY)=range(2)
+print(list(range(2)))
+(MONDAY, TUESDAY, WEDNESDAY) = list(range(3))
 print('#',50*"-")
 # -----------------------
 d = {"server":"one","database":"master"}
