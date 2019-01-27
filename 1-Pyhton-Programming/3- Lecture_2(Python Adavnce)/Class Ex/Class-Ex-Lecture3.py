@@ -39,7 +39,7 @@
 
 
 # =================================================================
-# Class_Ex5:
+# Class_Ex4:
 # Write a Python class and name it Circle to calculate the area of circle
 # by a radius and two methods which will compute the area and the perimeter
 # of a circle.
