@@ -30,8 +30,6 @@
 
 
 
-
-
 # =================================================================
 # Class_Ex5:
 # Write a NumPy code to create an array with the values
