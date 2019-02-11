@@ -36,3 +36,65 @@ color_list = ['b', 'g', 'r', 'k', 'y']
 
 
 
+# =================================================================
+# Class_Ex4:
+# Write a Python code to plot couple of lines
+# on same plot with suitable legends of each line.
+# ----------------------------------------------------------------
+
+
+
+
+
+
+
+# =================================================================
+# Class_Ex5:
+# Write a Python code to plot two or more lines with legends,
+# different widths and colors.
+# ----------------------------------------------------------------
+
+
+
+
+
+
+
+
+# =================================================================
+# Class_Ex6:
+# Write a Python code to plot two or more lines and set the line markers.
+# ----------------------------------------------------------------
+
+
+
+
+
+
+
+# =================================================================
+# Class_Ex7:
+# Write a Python code to show grid and draw line graph of
+# revenue of certain compan between November 4, 2017 to November 4, 2018.
+# Customized the grid lines with linestyle -, width .6. and color blue.
+# ----------------------------------------------------------------
+
+
+
+
+
+
+
+# =================================================================
+# Class_Ex8:
+# Write a Python code to create multiple empty plots  in one plot
+# (facets)
+# ----------------------------------------------------------------
+
+
+
+
+
+
+
+
