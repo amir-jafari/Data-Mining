@@ -15,7 +15,7 @@ print('5' + "10")
 print('abc' + 'efg')
 # print(5 + '10') ---> Error
 print(2 + int('11'))
-# -----------------------
+# %%-----------------------
 x = 2
 print(x)
 print('x')
@@ -31,7 +31,7 @@ print('First, variable a has value', a,
 a = 'abc'
 print('Now, variable a has value', a, 
                        'and type', type(a))
-# -----------------------
+# %%-----------------------
 x = 5.62
 print(type(x))
 pi = 3.14159
@@ -41,7 +41,7 @@ avogadros_number = 6.022e23
 c = 2.998e8
 print("Avogadro's number =", avogadros_number)
 print("Speed of light =", c)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 print('A\nB\nC')
 print('D\tE\tF')
 print('WX\bYZ') #---> Backspace
@@ -52,7 +52,7 @@ print('Did you know that \'word\' is a word?')
 print("Did you know that \"word\" is a word?")
 filename = 'C:\\Users\\rick'
 print(filename)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 print('Please enter your First Name: ')
 x = input()
 print('Text entered:', x)
@@ -67,7 +67,7 @@ print(w, x, y, z, sep=',')
 print(w, x, y, z, sep='')
 print(w, x, y, z, sep=':')
 print(w, x, y, z, sep='-----')
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 x, y, z = 3, -4, 0
 x = -x
 y = -y
@@ -77,33 +77,33 @@ x = +y
 print(x)
 print(10/3, 3/10, 10//3, 3//10)
 print(10%3, 3%10)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 degreesF = eval(input('Enter the temperature in degrees F: '))
 # Perform the conversion
 degreesC = 5/9*(degreesF - 32)
 # Report the result
 print('temperature in degrees C: ', degreesC)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 a = True
 b = False
 print('a =', a, ' b =', b)
 a = False;
 print('a =', a, ' b =', b)
-dividend, divisor = input('Enter two numbers to divide: ')
+dividend, divisor = eval(input('Enter two numbers to divide: '))
 if int(divisor) != 0:
 	print('dividend / divisor = ', int(dividend)/int(divisor))
 if x < 1:
 	y = x
 if x < 1: y = x
-dividend, divisor = input('Please enter two numbers: ')
+dividend, divisor = eval(input('Please enter two numbers: '))
 if int(divisor) != 0:
 	quotient = int(dividend)/int(divisor)
-	print(dividend + '/'+ divisor + "=", quotient)
+	print(str(dividend) + '/'+ str(divisor) + "=", quotient)
 print('Program finished')
-# -----------------------
-dividend, divisor = input('Please enter two numbers: ')
+# %%-----------------------------------------------------------------------------------------
+dividend, divisor = eval(input('Please enter two numbers: '))
 if int(divisor) != 0:
-	print(dividend+ '/'+ divisor+ "=", int(dividend)/int(divisor))
+	print(str(dividend)+ '/'+ str(divisor)+ "=", int(dividend)/int(divisor))
 else:
 	print('Division by zero is not allowed')
 a1 = 1 - 1
@@ -113,7 +113,7 @@ if a1 == a2:
 	print('They are Same.')
 else:
 	print('They are Different.')
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 x = 1
 y = 2
 b = (x == 1) 
@@ -129,17 +129,17 @@ b = (x != 1 or y != 2)
 if x == 1 or 2 or 3:
 	print("OK") 
 x == 1 or 2 or 3
-# -----------------------
-value = input("Enter value in the range 0 to10: ")
+# %%-----------------------------------------------------------------------------------------
+value = eval(input("Enter value in the range 0 to10: "))
 if int(value) >= 0: # First check
 	if int(value) <= 10:
 		print("In range")
 print("Done")
-value = input("Enter value in the range 0 to10: ")
+value = eval(input("Enter value in the range 0 to10: "))
 if int(value) >= 0 and int(value) <= 10:
 	print("In range")
 print("Done")
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 print("Help! My computer doesn't work!")
 print("Does the computer make any sounds (fans, etc.)")
 choice = input("or show any lights? (y/n):")
@@ -172,8 +172,8 @@ if choice == 'n':
 				print("please run this program again.")
 else:
 	print("Please consult a service technician.")
-# -----------------------
-value = input("Enter a value from range 0 to 5: ")
+# %%-----------------------------------------------------------------------------------------
+value = eval(input("Enter a value from range 0 to 5: "))
 if int(value) < 0:
 	print("Too small")
 elif int(value) == 0:
@@ -191,7 +191,7 @@ elif int(value) == 5:
 else:
 	print("Too large")
 print("Done")
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 count = 0 
 while count <= 3: 
 	print(count) 
@@ -209,7 +209,7 @@ stop = int(input())
 while n <= stop:
 	print(n)
 	n += 1
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 for n in range(1, 11):
 	print(n)
 for n in range(21, 0, -3):
@@ -218,7 +218,7 @@ sum = 0
 for i in range(1, 100):
 	sum += i
 print(sum)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 print(" 1 2 3 4 5 6 7 8 9 10")
 print(" +----------------------------------------")
 for row in range(1, 11): 
@@ -233,7 +233,7 @@ for row in range(1, 11):
 			print(end=" ")
 		print(product, end=" ")
 	print()
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 entry = 0
 sum = 0 
 print("Enter numbers to sum, negative number ends list:")
@@ -257,7 +257,7 @@ while not done:
 	else:
 		done = (val == 999)
 print("sum =", sum)
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 # while True:
 	# Do something forever. . .
 MAX = 20 
@@ -279,7 +279,7 @@ for n in range(1, MAX + 1):
 		if n % factor == 0: 
 			print(factor, end=' ') 
 	print() 
-# -----------------------
+# %%-----------------------------------------------------------------------------------------
 val = eval(input('Enter number: '))
 root = 1.0;
 diff = root*root - val
