@@ -35,3 +35,5 @@
 14. Agglomerative
 
 15. Logitic Regression
+
+PyQt
