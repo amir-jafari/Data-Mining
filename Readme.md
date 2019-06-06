@@ -36,4 +36,4 @@
 
 15. Logitic Regression
 
-PyQt Demos
+PyQt4 Demos
