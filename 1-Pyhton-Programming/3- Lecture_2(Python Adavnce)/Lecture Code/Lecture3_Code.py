@@ -36,9 +36,9 @@ print('#',50*"-")
 # -----------------------
 t1 = ['a', 'b', 'c']
 t2 = ['d', 'e']
-print(t1.extend(t2))
+print(t1.extend(t2));print(t2)
 t = ['d', 'c', 'e', 'b', 'a']
-print(t.sort())
+print(t.sort()); print(t)
 def add_all(t):
     total = 0
     for x in t:
@@ -54,7 +54,7 @@ x = t.pop(1); print(t)
 s = 'spam'
 print(list(s))
 s = 'spam-spam-spam'
-s.split('-'); print(s)
+print(s.split('-')); print(s)
 t = ['I', 'Love', 'Python', 'Very Much']
 delimiter = ' '
 print(delimiter.join(t))
@@ -98,60 +98,62 @@ print("(", pt.x, ",", pt.y, ")", sep="")
 print('#',50*"-")
 # -----------------------
 class EmployeeRecord:
-    def __init__(self, n, i, r):
-        self.name = n
-        self.id = i
-        self.pay_rate = r
+	def __init__(self, n, i, r):
+		self.name = n
+		self.id = i
+		self.pay_rate = r
 
-	def open_database(filename, db):
-		lines = open(filename)
-		for line in lines:
-			name, id, rate = eval(line)
-			db.append(EmployeeRecord(name, id, rate))
-		lines.close()
-		return True
+def open_database(filename, db):
+    lines = open(filename)
+    for line in lines:
+        name, id, rate = eval(line)
+        db.append(EmployeeRecord(name, id, rate))
+    lines.close()
+    return True
 
-	def print_database(db):
-		for rec in db:
-			print(str.format("{:>5}: {:<10} {:>6.2f}",
-				rec.id, rec.name, rec.pay_rate))
+def print_database(db):
+    for rec in db:
+        print(str.format("{:>5}: {:<10} {:>6.2f}",
+                         rec.id, rec.name, rec.pay_rate))
 
-	def less_than_by_name(e1, e2):
-		return e1.name < e2.name
+def less_than_by_name(e1, e2):
+    return e1.name < e2.name
 
-	def less_than_by_id(e1, e2):
-		return e1.id < e2.id
+def less_than_by_id(e1, e2):
+    return e1.id < e2.id
 
-	def less_than_by_pay(e1, e2):
-		return e1.pay_rate < e2.pay_rate
+def less_than_by_pay(e1, e2):
+    return e1.pay_rate < e2.pay_rate
 
-	def sort(db, comp):
-		n = len(db)
-		for i in range(n - 1):
-			smallest = i
+def sort(db, comp):
+    n = len(db)
+    for i in range(n - 1):
+        smallest = i
 
-			for j in range(i + 1, n):
-				if comp(db[j], db[smallest]):
-					smallest = j
-			if smallest != i:
-				db[i], db[smallest] = db[smallest], db[i]
-	def main():
-		database = []
-		if open_database("data.dat", database):
-			print("---- Unsorted:")
-			print_database(database)
-			sort(database, less_than_by_name)
-			print("---- Name order:")
-			print_database(database)
-			sort(database, less_than_by_id)
-			print("---- ID order:")
-			print_database(database)
-			sort(database, less_than_by_pay)
-			print("---- Pay order:")
-			print_database(database)
-		else: # Error, could not open file
-			print("Could not open database file")
+        for j in range(i + 1, n):
+            if comp(db[j], db[smallest]):
+                smallest = j
+        if smallest != i:
+            db[i], db[smallest] = db[smallest], db[i]
+def main():
+    database = []
+    if open_database("data.dat", database):
+        print("---- Unsorted:")
+        print_database(database)
+        sort(database, less_than_by_name)
+        print("---- Name order:")
+        print_database(database)
+        sort(database, less_than_by_id)
+        print("---- ID order:")
+        print_database(database)
+        sort(database, less_than_by_pay)
+        print("---- Pay order:")
+        print_database(database)
+    else:  # Error, could not open file
+        print("Could not open database file")
+
 main()
+print('#',50*"-")
 print('#',50*"-")
 # -----------------------
 def a(x,y):
