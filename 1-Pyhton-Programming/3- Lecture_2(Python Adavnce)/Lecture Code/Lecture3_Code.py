@@ -151,7 +151,6 @@ def main():
         print_database(database)
     else:  # Error, could not open file
         print("Could not open database file")
-
 main()
 print('#',50*"-")
 # -----------------------
