@@ -154,7 +154,6 @@ def main():
 
 main()
 print('#',50*"-")
-print('#',50*"-")
 # -----------------------
 def a(x,y):
     print(x and y)
