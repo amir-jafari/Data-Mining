@@ -20,7 +20,6 @@ from PyQt5.QtWidgets import QGroupBox    # Group Box
 
 # These components are essential for creating the graphics in pqt5
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure     # Figure
 #---------------------------------------------------------------------
 
@@ -165,6 +164,7 @@ class GraphWParamsClass(QMainWindow):
         self.main_widget = QWidget(self)
         self.layout = QVBoxLayout(self.main_widget)   # Creates vertical layout
 
+        # Fist the group boxes are created
         self.groupBox1 = QGroupBox('')
         self.groupBox1Layout= QVBoxLayout()
         self.groupBox1.setLayout(self.groupBox1Layout)
@@ -177,39 +177,40 @@ class GraphWParamsClass(QMainWindow):
         self.groupBox3Layout = QVBoxLayout()
         self.groupBox3.setLayout(self.groupBox3Layout)
 
+        # the checkline is created to be added to the first group
         self.chkline = QCheckBox("Include Regression LIne", self)
         self.chkline.setChecked(True)
         self.chkline.stateChanged.connect(self.onClicked)
 
         self.groupBox1Layout.addWidget(self.chkline)
 
+        # Radio buttons are create to be added to the second group
+
         self.b1 = QRadioButton("Orange")
         self.b1.setChecked(True)
         self.b1.toggled.connect(self.onClicked)
 
-        self.layout.addWidget(self.b1)
-
         self.b2 = QRadioButton("Blue")
         self.b2.toggled.connect(self.onClicked)
 
-        self.layout.addWidget(self.b2)
-
         self.b3 = QRadioButton("Red")
         self.b3.toggled.connect(self.onClicked)
-        self.groupBox2Layout.addWidget(self.b1)
-
-        self.layout.addWidget(self.b3)
 
         self.buttonlabel = QLabel(self.vcolor+' is selected')
-
-        self.layout.addWidget(self.buttonlabel)
 
         self.groupBox2Layout.addWidget(self.b1)
         self.groupBox2Layout.addWidget(self.b2)
         self.groupBox2Layout.addWidget(self.b3)
         self.groupBox2Layout.addWidget(self.buttonlabel)
 
-        # Containers for the graphic
+        # Information to be displayed in the graph
+        self.X_1 = np.array( [1,2,3,4,5,6,7,8,9,10])
+        self.y_1 = np.array([15,25,30,20,50,55,60,55,70,75])
+
+        # Parameters for the regression line
+        self.b, self.m = polyfit(self.X_1, self.y_1, 1)
+
+        # figure and canvas figure to draw the graph is created to
 
         self.fig = Figure()
         self.ax1 = self.fig.add_subplot(111)
@@ -218,15 +219,6 @@ class GraphWParamsClass(QMainWindow):
         self.canvas.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
         self.canvas.updateGeometry()
-
-        # Information to be displayed in the graph
-        self.X_1 = np.array( [1,2,3,4,5,6,7,8,9,10])
-        self.y_1 = np.array([15,25,30,20,50,55,60,55,70,75])
-
-
-        # Parameters for the regression line
-        self.b, self.m = polyfit(self.X_1, self.y_1, 1)
-
 
         # Canvas is added to the third group box
         self.groupBox3Layout.addWidget(self.canvas)
@@ -244,8 +236,12 @@ class GraphWParamsClass(QMainWindow):
 
 
     def onClicked(self):
+
+        # Figure is cleared to create the new graph with the choosen parameters
         self.ax1.clear()
 
+        # the buttons are inspect to indicate which one is checked.
+        # vcolor is assigned the chosen color
         if self.b1.isChecked():
             self.vcolor = self.b1.text()
         if self.b2.isChecked():
@@ -253,7 +249,11 @@ class GraphWParamsClass(QMainWindow):
         if self.b3.isChecked():
             self.vcolor = self.b3.text()
 
+        # the label that displays the selected option
         self.buttonlabel.setText(self.vcolor+' is selected')
+
+        # create the scatter plot , a radio button option could be created
+        # to choose a scatter plot or other type of graphic
 
         self.ax1.scatter(self.X_1, self.y_1)
 

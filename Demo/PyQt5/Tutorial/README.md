@@ -27,3 +27,6 @@ This code creates an entry to manage  radio buttons.A label is modified with the
 ## PyQt5 7
 
 This code implements three options. The firsts one shows how to use a groupbox with checkboxes. The second one shows how to use graphics with matplotlib. And the third one shows how to implement a graphic with parameters. This last option implements all the previous concepts describe in the tutorial.
+
+## PyQT5 Tutorial
+This is pdf file that contains documentation and comments for each file in this repository.
