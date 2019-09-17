@@ -122,7 +122,7 @@ a.shape = (6, 2)
 print(a.T)
 print(a.resize((2,6)))
 print(a.reshape(3,-1))
-print('#',50*"-")
+a= print('#',50*"-")
 # -----------------------
 a = np.floor(10*np.random.random((2,2)));print(a)
 b = np.floor(10*np.random.random((2,2)));print(b)
