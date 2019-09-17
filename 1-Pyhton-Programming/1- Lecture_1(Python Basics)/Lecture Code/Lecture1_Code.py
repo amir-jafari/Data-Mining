@@ -26,10 +26,10 @@ print('x = ' + str(x))
 x , y, z = 20, 40, -30
 print('x =', x, ' y =', y, ' z =', z)
 a = 1
-print('First, variable a has value', a, 
+print('First, variable a has value', a,
                        'and type', type(a))
 a = 'abc'
-print('Now, variable a has value', a, 
+print('Now, variable a has value', a,
                        'and type', type(a))
 # %%--------------------
 x = 5.62
@@ -67,7 +67,7 @@ print(w, x, y, z, sep=',')
 print(w, x, y, z, sep='')
 print(w, x, y, z, sep=':')
 print(w, x, y, z, sep='-----')
-# %%--------------------
+# # %%--------------------
 x, y, z = 3, -4, 0
 x = -x
 y = -y
@@ -77,7 +77,7 @@ x = +y
 print(x)
 print(10/3, 3/10, 10//3, 3//10)
 print(10%3, 3%10)
-# %%--------------------
+# # %%--------------------
 degreesF = eval(input('Enter the temperature in degrees F: '))
 # Perform the conversion
 degreesC = 5/9*(degreesF - 32)
