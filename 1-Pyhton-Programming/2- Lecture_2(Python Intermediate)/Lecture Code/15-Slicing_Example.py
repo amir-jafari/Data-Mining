@@ -1,0 +1,12 @@
+lst = [10, 20, 30, 40, 50, 60, 70, 80]
+print(lst)
+print(lst[0:3])
+print(lst[4:8])
+print(lst[2:5])
+print(lst[-5:-3])
+print(lst[:3])
+print(lst[4:])
+print(lst[:])
+print(lst[-100:3])
+print(lst[4:100])
+print('#',50*"-")
