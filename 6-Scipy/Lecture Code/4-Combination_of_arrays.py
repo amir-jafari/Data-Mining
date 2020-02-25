@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 
 import scipy.ndimage
 import numpy as np
-text = scipy.ndimage.imread('image.png')
-text = np.mean(text.astype(float)/255,-1)*2-1
+text = plt.imread('image.png')
 letterE = text[37:53,275:291]
 corr = scipy.ndimage.correlate(text,letterE)
 eLocations = (corr >= 0.95 * corr.max())
