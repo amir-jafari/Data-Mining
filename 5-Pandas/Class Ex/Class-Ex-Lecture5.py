@@ -101,7 +101,7 @@ print('#',50*"-")
 
 # =================================================================
 # Class_Ex12:
-# Sor the df ascending and not ascending
+# Sor the df ascending and not descending 
 # ----------------------------------------------------------------
 
 print('#',50*"-")
