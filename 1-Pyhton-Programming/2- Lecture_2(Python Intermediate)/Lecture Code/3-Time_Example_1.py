@@ -1,15 +1,15 @@
-from time import clock
+from time import time
 print("Enter your name: ", end="")
-start_time = clock()
+start_time = time()
 name = input()
-elapsed = clock() - start_time
+elapsed = time() - start_time
 print(name, "It took you", elapsed, "seconds to type")
 
 sum = 0
-start = clock()
+start = time()
 for n in range(1, 10001):
     sum += n
-elapsed = clock() - start
+elapsed = time() - start
 print("sum:", sum, "time:", elapsed)
 
 from time import sleep
