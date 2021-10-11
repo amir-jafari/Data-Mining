@@ -6,7 +6,7 @@ A=18; w=3*numpy.pi; h=0.5
 
 x=None; y=None
 x=numpy.linspace(0,1,100); y=A*numpy.sin(w*x+h)
-y += 4*((0.5-scipy.rand(100))*numpy.exp(2*scipy.rand(100)**2))
+y += 4*((0.5-numpy.random.rand(100))*numpy.exp(2*numpy.random.rand(100)**2))
 
 import scipy.optimize
 p0 = [20, 2*numpy.pi, 1]
