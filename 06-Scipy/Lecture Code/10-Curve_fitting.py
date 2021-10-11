@@ -5,12 +5,12 @@ A=18; w=3*numpy.pi; h=0.5
 x=numpy.linspace(0,1,100); y=A*numpy.sin(w*x+h)
 
 yc=None
-yc=scipy.copy(y)
-yc += 4*((0.5-scipy.rand(100))*numpy.exp(2*scipy.rand(100)**2)) # contamined data
+yc=numpy.copy(y)
+yc += 4*((0.5-numpy.random.rand(100))*numpy.exp(2*numpy.random.rand(100)**2)) # contamined data
 
 p0=None
 p0 = [20, 2*scipy.pi, 1]
-target_function = lambda x,AA,ww,hh: AA*scipy.sin(ww*x+hh)
+target_function = lambda x,AA,ww,hh: AA*numpy.sin(ww*x+hh)
 import scipy.optimize
 pF=None
 pVar = None
