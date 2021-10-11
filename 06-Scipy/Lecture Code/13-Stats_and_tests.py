@@ -26,7 +26,7 @@ print('#',50*"-")
 # -----------------------
 from scipy.stats import gaussian_kde
 
-plt.hist(dataDiff, normed=1)
+plt.hist(dataDiff, density=1)
 x=numpy.linspace(dataDiff.min(),dataDiff.max(),1000)
 pdf=norm.pdf(x,mean,std)
 plt.plot(x,pdf)
@@ -34,11 +34,11 @@ plt.plot(x,pdf)
 
 pdf = gaussian_kde(dataDiff)
 pdf = pdf.evaluate(x)
-plt.hist(dataDiff, normed=1)
+plt.hist(dataDiff, density=1)
 plt.plot(x,pdf,'k')
 plt.show()
 
-plt.hist(dataDiff, normed=1)
+plt.hist(dataDiff, density=1)
 plt.plot(x,pdf,'k.-',label='Kernel fit')
 plt.plot(x,norm.pdf(x,mean,std),'r',label='Normal fit')
 plt.legend()
