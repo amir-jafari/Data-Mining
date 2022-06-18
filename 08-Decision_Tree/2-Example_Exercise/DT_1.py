@@ -22,8 +22,14 @@ import warnings
 warnings.filterwarnings("ignore")
 import sys
 #%%-----------------------------------------------------------------------
+# windows Download https://graphviz.org/download/
+# Mac brew install
+#pip install pydotplot
+#exit pycharm, reopen
+#brew install graphviz 
+
 import os
-os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
 #%%-----------------------------------------------------------------------
 
 # Libraries to display decision tree
