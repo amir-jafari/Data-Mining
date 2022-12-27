@@ -36,4 +36,8 @@
 
 15. Logitic Regression
 
+16. More Clustering Algorithm
+
+17. Preprocessing
+
 PyQt4 Demos
