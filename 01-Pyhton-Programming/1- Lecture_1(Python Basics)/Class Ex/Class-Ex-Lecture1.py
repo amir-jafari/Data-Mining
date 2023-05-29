@@ -8,7 +8,6 @@
 
 
 
-
 # =================================================================
 # Class_Ex2: 
 # Write a python program to print all the different arrangements of the

@@ -12,7 +12,7 @@ B=A[zero_sum_rows,:]
 print(B[0:3,:])
 
 mu=1/numpy.sqrt(2)
-A=numpy.matrix([[mu,0,mu],[0,1,0],[mu,0,-mu]])
+A=numpy.array([[mu,0,mu],[0,1,0],[mu,0,-mu]])
 B=scipy.linalg.kron(A,A)
 
 a=numpy.arange(0,2*numpy.pi,1.6)

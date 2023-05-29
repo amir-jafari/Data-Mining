@@ -1,6 +1,8 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+
 sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})
 rs = np.random.RandomState(1979)
 x = rs.randn(500)

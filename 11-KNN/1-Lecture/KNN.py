@@ -36,7 +36,7 @@ from sklearn.neighbors import NearestNeighbors
 knn2 = NearestNeighbors(n_neighbors=3)
 knn2.fit(X_train_std)
 #print sum(sum((knn2.kneighbors(X_train_std)[0])))
-print knn2.kneighbors(X_train_std)[0]
+print( knn2.kneighbors(X_train_std)[0])
 '''
 def loss_function(x,k):
     sum_distance = sum(sum(k.kneighbors(X_test_std)[0]))

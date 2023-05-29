@@ -1,7 +1,7 @@
 import numpy
 import scipy
 import matplotlib.pyplot as plt
-
+import scipy.misc
 from scipy.linalg import svd
 
 plt.rcParams['figure.figsize'] = (12.0, 8.0)

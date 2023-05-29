@@ -33,7 +33,7 @@
 
 # =================================================================
 # Class_Ex5:
-# Write a program to get the 3th element of a tuple.
+# Write a program to get the 3th element and 3th element from last of a tuple.
 # ----------------------------------------------------------------
 
 

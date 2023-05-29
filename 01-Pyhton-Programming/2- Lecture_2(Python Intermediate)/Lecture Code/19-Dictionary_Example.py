@@ -16,3 +16,6 @@ print(my_dict.values())
 print(my_dict.items())
 print('c' in my_dict)
 print('#',50*"-")
+
+s = 's'
+s.capitalize()

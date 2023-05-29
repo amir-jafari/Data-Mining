@@ -1,4 +1,6 @@
 import numpy as np
+from numpy import pi
+
 a = np.ones((2,3), dtype=int)
 b = np.random.random((2,3))
 a *= 3

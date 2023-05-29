@@ -30,5 +30,5 @@ for edge in edges:
         dest = graph.get_node(str(edges[edge][i]))[0]
         dest.set_fillcolor(colors[i])
 
-graph.write_png('tree.png')
-graph.write_svg('tree.svg')
+graph.write_png('tree1.png')
+graph.write_svg('tree1.svg')

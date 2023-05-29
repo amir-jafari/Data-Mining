@@ -12,4 +12,5 @@ def count_to_n(n):
         print(i)
 print("Going to count to five . . .")
 count_to_n(5)
+count_to_n(10)
 print('#',50*"-")
