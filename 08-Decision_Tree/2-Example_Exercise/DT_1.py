@@ -29,7 +29,7 @@ import sys
 #brew install graphviz 
 
 import os
-os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/'
 #%%-----------------------------------------------------------------------
 
 # Libraries to display decision tree
