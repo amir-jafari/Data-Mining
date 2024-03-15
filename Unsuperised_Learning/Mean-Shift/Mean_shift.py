@@ -1,27 +1,22 @@
-print(__doc__)
-
-from sklearn.cluster import AffinityPropagation
 from sklearn import datasets
 import matplotlib.pyplot as plt
 from itertools import cycle
-print(__doc__)
 import numpy as np
-from sklearn.cluster import MeanShift, estimate_bandwidth
+from sklearn.cluster import MeanShift
+from sklearn.preprocessing import StandardScaler
+
 
 iris = datasets.load_iris()
 X = iris.data[:, [2,3]]
 y = iris.target
 
 
-# data pre processing
-from sklearn.preprocessing import StandardScaler
+
+
 sc = StandardScaler()
 sc.fit(X)
 X = sc.transform(X)
 
-
-# The following bandwidth can be automatically detected using
-#bandwidth = estimate_bandwidth(X, quantile=0.2, n_samples=500)
 
 ms = MeanShift(bandwidth=None,seeds=None,n_jobs=1)
 ms.fit(X)
