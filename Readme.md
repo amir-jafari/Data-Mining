@@ -1,43 +1,26 @@
-# Data Mining
+## Necessary Python Codes
+- Classes
+- Functions
 
+## Data Structure
 
-## Getting Started 
+- Trie
 
-1. Python Programming
-	1. Basic
-	2. Intemediate
-	3. Advance 
+## EDA
 
-2. Numpy
+- Preprocessing
+- Imputation
 
-3. Matplotlib
+## UnSupervised Learning
 
-4. Seaborn
+- Clustering
 
-5. Pandas
+## Supervised Learning
 
-6. Scipy
+- Classical Models
 
-7. Preprocessing
+## Extra Packages
 
-8. Decision Tree
+- Cryptography
+- Request
 
-9. Random Forest
-
-10. SVM
-
-11. KNN
-
-12. Naive Bayes
-
-13. Kmean
-
-14. Agglomerative
-
-15. Logitic Regression
-
-16. More Clustering Algorithm
-
-17. Preprocessing
-
-PyQt4 Demos
