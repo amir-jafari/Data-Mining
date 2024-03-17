@@ -1,4 +1,4 @@
-import pydotplus
+import pydotplus        # pip install pydotplus
 from sklearn.datasets import load_iris
 from sklearn import tree
 import collections
