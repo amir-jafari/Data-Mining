@@ -5,6 +5,7 @@ from pyvis.network import Network
 # Create a social network graph
 G = nx.Graph()
 
+
 # Sample data: Social network connections (friendships)
 people = [
     "Alice", "Bob", "Charlie", "David", "Emma",
